@@ -13,15 +13,21 @@
         <body>
             <div class="container">
                 <h1>Produtos</h1>
-                <table>
+                <a href="/produto/insert" class="btn btn-primary">Novo Produto</a>
+                <table class="table">
                     <tr>
                         <th>Id</th>
                         <th>Título</th>
+                        <th>&nbsp;</th>
                     </tr>
                     <c:forEach var="item" items="${produtos}">
                         <tr>
                             <td>${item.id}</td>
                             <td>${item.titulo}</td>
+                            <td>
+                                <a href="/produto/update?id=${item.id}" class="btn btn-warning">Editar</a>
+                                <a href="/produto/delete?id=${item.id}" class="btn btn-danger">Excluir</a>
+                            </td>
                         </tr>
                     </c:forEach>
                 </table>
