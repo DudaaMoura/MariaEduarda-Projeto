@@ -11,19 +11,12 @@
     </head>
     <body>
         <div class="container">
-            <h1>Editar Produto</h1>
-            <form action="/produto/update" method="post">
+            <h1>Excluir Produto</h1>
+            <p>
+                Tem certeza que deseja excluir o produto "${produto.titulo}" ?
+            </p>
+            <form action="/produto/delete" method="post">
                 <input type="hidden" name="id" value="${produto.id}" />
-                <div class="form-group">
-                    <label for="titulo">Título</label>
-                    <input type="text" name="titulo" class="form-control" value="${genero.titulo}" />
-                </div>
-                <div class="form-group">
-                    <label for="descricao">Descrição</label>
-                    <input type="text" name="descricao" class="form-control" value="${genero.descricao}"/>
-
-                </div>
-                <br />
                 <a href="/produto/list" class="btn btn-primary">Voltar</a>
 
                 <button type="submit" class="btn btn-success">Salvar</button>

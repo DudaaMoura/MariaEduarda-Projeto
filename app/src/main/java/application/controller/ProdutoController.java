@@ -81,4 +81,11 @@ public class ProdutoController {
         }
         return "redirect:/produto/list";
     }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public String delete(@RequestParam("id") int id){
+
+        produtoRepo.deleteById(id);
+        return "redirect:/produto/list";
+    }
 }
