@@ -18,10 +18,16 @@
                     <input type="text" name="titulo" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="isbn">ISBN</label>
-                    <input type="text" name="isbn" class="form-control" />
+                    <label for="descricao">Descrição</label>
+                    <input type="text" name="descricao" class="form-control" />
 
                 </div>
+                <br />
+                <a href="/produto/list" class="btn btn-primary">Voltar</a>
+
+                <button type="submit" class="btn btn-success">Salvar</button>
+
+                
 
 
             </form>
